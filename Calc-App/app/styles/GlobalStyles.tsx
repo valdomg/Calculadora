@@ -1,9 +1,8 @@
 import { StyleSheet } from "react-native";
-import { myColors } from "./Colors";
-
-
+import { myColors } from "./Colors"; 
 
 export const Styles = StyleSheet.create({
+    // Button
     btnBlue: {
         width: 72,
         height: 72,
@@ -13,7 +12,6 @@ export const Styles = StyleSheet.create({
         alignItems: "center",
         margin: 8,
     },
-
     btnDark: {
         width: 72,
         height: 72,
@@ -23,7 +21,6 @@ export const Styles = StyleSheet.create({
         alignItems: "center",
         margin: 8,
     },
-
     btnLight: {
         width: 72,
         height: 72,
@@ -33,7 +30,6 @@ export const Styles = StyleSheet.create({
         alignItems: "center",
         margin: 8,
     },
-
     btnGray: {
         width: 72,
         height: 72,
@@ -43,41 +39,33 @@ export const Styles = StyleSheet.create({
         alignItems: "center",
         margin: 8,
     },
-
     smallTextLight: {
         fontSize: 32,
         color: myColors.white,
     },
-
     smallTextDark: {
         fontSize: 32,
         color: myColors.black,
-    }
-    //Keyboard
-    ,
-
-    //Keyboard
+    },
+    // Keyboard
     row: {
         maxWidth: '100%',
         flexDirection: "row",
     },
-
     viewBottom: {
         position: 'absolute',
         bottom: 50,
     },
-
-    screemFirstNumber: {
+    screenFirstNumber: {
         fontSize: 96,
         color: myColors.gray,
         fontWeight: '200',
         alignSelf: "flex-end",
     },
-
-    screemSecondNumber: {
+    screenSecondNumber: {
         fontSize: 40,
         color: myColors.gray,
         fontWeight: '200',
         alignSelf: "flex-end",
-    }
-});
+    },
+})
