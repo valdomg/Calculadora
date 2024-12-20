@@ -57,29 +57,35 @@ export default function MyKeyboard() {
   };
 
   const getResult = () => {
-      switch (operation) {
-        case "+":
-            clear();
-            setResult(parseInt(secondNumber) + parseInt(firstNumber));
-            break;
-        case "-":
-            clear();
-            setResult(parseInt(secondNumber) - parseInt(firstNumber));
-            break;
-        case "*":
-            clear();
-            setResult(parseInt(secondNumber) * parseInt(firstNumber));
-            break;
-        case "/":
-            clear();
-            setResult(parseInt(secondNumber) / parseInt(firstNumber));
-            break;
-        default:
-            clear();
-            setResult(0);
-            break;
-        }
-    };
+    if (!firstNumber || !secondNumber || !operation) return;
+  
+    let calcResult = 0;
+    const num1 = parseFloat(secondNumber);
+    const num2 = parseFloat(firstNumber);
+  
+    switch (operation) {
+      case "+":
+        calcResult = num1 + num2;
+        break;
+      case "-":
+        calcResult = num1 - num2;
+        break;
+      case "*":
+        calcResult = num1 * num2;
+        break;
+      case "/":
+        calcResult = num2 !== 0 ? num1 / num2 : 0; // Evita divisão por zero
+        break;
+      default:
+        return;
+    }
+  
+    setResult(calcResult);
+    setFirstNumber(calcResult.toString());
+    setSecondNumber("");
+    setOperation("");
+  };
+  
 
   return (
     <View style={Styles.viewBottom}>
