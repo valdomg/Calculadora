@@ -45,7 +45,7 @@ export const Styles = StyleSheet.create({
     },
     smallTextDark: {
         fontSize: 32,
-        color: myColors.black,
+        color: myColors.white,
     },
     // Keyboard
     row: {
@@ -57,7 +57,7 @@ export const Styles = StyleSheet.create({
         bottom: 50,
     },
     screenFirstNumber: {
-        fontSize: 96,
+        fontSize: 50,
         color: myColors.gray,
         fontWeight: '200',
         alignSelf: "flex-end",
